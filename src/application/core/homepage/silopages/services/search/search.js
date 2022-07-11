@@ -9,8 +9,8 @@ import MapGL from '../components/MapGL.html';
 import VenuesFFM from '../components/VenuesFFM.html';
 
 
-export default function Search({ searchResults }) extends Component {
-	render() {
+export default function Search({ searchResults }) {
+	
 
 	const MapWithNoSSR = dynamic(() => import('../components/MapGL'), {
 		ssr: false
@@ -118,10 +118,11 @@ export default function Search({ searchResults }) extends Component {
 			  </main>
 			<Footer />
         </div>
-    )
+    );
 }
 
-export default Search; 
+
+ 
 
 export async function getServerSideProps() {
 	const searchResults = await fetch("https://jsonkeeper.com/b/0X4Y").then(res => res.json());

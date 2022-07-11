@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './library/css/search.css';
-import Search from './application/core/search';
-import * as serviceWorker from './application/core/serviceWorker';
+import './src/library/css/search.css';
+import Search from './src/application/core/search';
+import * as serviceWorker from './src/application/core/serviceWorker';
 
 ReactDOM.render(<Search />, document.getElementById('root'));
 
