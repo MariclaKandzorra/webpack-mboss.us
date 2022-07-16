@@ -3,17 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "description": "dev platform for startup",
-  "welcome": "server.js",
+  "Server": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     
-    "server": "node server.js --open",
-    "watch": "webpack --watch",
-	
-	"start": "webpack-dev-server --config ./webpack.config.js --open",
-    "build": "NODE_ENV=production webpack",
-    "dev": "webpack serve --open",
-
+    "start": "webpack-dev-server --open",
     "clean": "true"
   },
   "repository": {
@@ -44,6 +37,7 @@
     "core-js": "^3.23.4",
     "css-loader": "^6.7.1",
     "docx-loader": "^1.0.4",
+    "file-loader": "^6.2.0",
     "generate-json-webpack-plugin": "^2.0.0",
     "html-loader": "^3.1.2",
     "html-webpack-plugin": "^5.5.0",

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import hero from '../public/assets/img/hero.gif'
+import hero from './assets/img/hero'
 
 
 function Banner() {
