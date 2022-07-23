@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import { HeartIcon } from '@heroicons/react/solid'
-import { StarIcon } from '@heroicons/react/outline'
+import { HeartIcon } from '../node_modules/@heroicons/react/solid'
+import { StarIcon } from '../node_modules/@heroicons/react/outline'
 
 function InfoCard({img, location, title, description, star, price, total }) {
     return (

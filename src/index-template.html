@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Home | Index.js</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Design Event MBOSS.US</title>
+  <link rel="icon" href="https://i.ibb.co/CM7x3FX/1628329259246.png" />
+
 
 <meta name="description" content="A simple HTML5 Template for new projects.">
   <meta name="author" content="Maricla Kandzorra Martelli">
@@ -13,16 +16,64 @@
   <meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/">
   <meta property="og:description" content="A simple HTML5 Template for new projects.">
 
-  
+
+
 
 </head>
 
 <body>
 
 
+     
+    <Header /> 
+    <Banner /> 
+   
+
+      <main className='max-w-7xl mx-auto px-8 sm:px-16'>
+        <section className='pt-6'>
+          <h2 className='text-4xl font-semibold pb-4'>Explore nearby</h2>
+
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+          { exploreData?.map(({img, distance, location}) => (
+            <SmallCard
+              key={img}
+              img={img}
+              distance={distance}
+              location={location}
+            />
+          )) }
+          </div>
+        </section>
+        <section className='pt-6'>
+          <h2 className='text-4xl font-semibold py-8'>Celebrate Anywhere</h2>
+   
+          <div className='flex space-x-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 hover:overflow-contain hidden:overflow-x-scroll p-4 -ml-6'>
+          { cardsData?.map(({img, title}) => (
+            <MediumCard 
+              key={img} 
+              img={img} 
+              title={title} 
+            /> 
+          )) }
+          </div>
+        </section>
+        <section className=''> 
+        <LargeCard />    
+        </section>
+        <section>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        </section>
+      </main>
+      <Footer className=''/>
+    
+    </div> 
 
 
-<div id='root'></div>
+
 
 
 

@@ -1,11 +1,11 @@
 import React from "react";
 import Head from "next/head";
-import Header from './application/components/Header';
-import Banner from './application/components/Banner';
-import SmallCard  from './application/components/SmallCard';
-import MediumCard from './application/components/MediumCard';
-import LargeCard from './application/components/LargeCard';
-import Footer from './application/components/Footer';
+import Header from './src/application/components/Header';
+import Banner from './src/application/components/Banner';
+import SmallCard  from './src/application/components/SmallCard';
+import MediumCard from './src/application/components/MediumCard';
+import LargeCard from './src/application/components/LargeCard';
+import Footer from './src/application/components/Footer';
 
 export default function HOME({ exploreData, cardsData }) {
   return (
@@ -15,14 +15,14 @@ export default function HOME({ exploreData, cardsData }) {
         <link rel="icon" href="https://i.ibb.co/CM7x3FX/1628329259246.png" />
       </Head>
      
-    <Header /> {/*You have to create an own Header page in e new components directory*/}
+    <Header /> 
     <Banner /> 
    
 
       <main className='max-w-7xl mx-auto px-8 sm:px-16'>
         <section className='pt-6'>
           <h2 className='text-4xl font-semibold pb-4'>Explore nearby</h2>
-          {/*Pull some data from a server - API endpoints */}
+          
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
           { exploreData?.map(({img, distance, location}) => (
             <SmallCard
@@ -36,7 +36,7 @@ export default function HOME({ exploreData, cardsData }) {
         </section>
         <section className='pt-6'>
           <h2 className='text-4xl font-semibold py-8'>Celebrate Anywhere</h2>
-          {/*Pull some data from a server - API endpoints */}
+         
           <div className='flex space-x-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 hover:overflow-contain hidden:overflow-x-scroll p-4 -ml-6'>
           { cardsData?.map(({img, title}) => (
             <MediumCard 
